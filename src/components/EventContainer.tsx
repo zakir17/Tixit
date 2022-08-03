@@ -1,9 +1,18 @@
+import Event from "../models/Event";
+import EventCard from "./EventCard";
 import "./EventContainer.css";
+interface Props {
+  events: Event[];
+}
 
-const EventContainer = () => {
+const EventContainer = ({ events }: Props) => {
   return (
     <div className="EventContainer">
-      <ul></ul>
+      <ul>
+        {events.map((singleEvent) => (
+          <EventCard event={singleEvent} key={`${singleEvent}`} />
+        ))}
+      </ul>
     </div>
   );
 };

@@ -1,7 +1,16 @@
+import Event from "../models/Event";
 import "./EventCard.css";
+interface Props {
+  event: Event;
+}
 
-const EventCard = () => {
-  return <div className="EventCard">EventCard works</div>;
+const EventCard = ({ event }: Props) => {
+  return (
+    <li className="EventCard">
+      <h2>{event.name}</h2>
+      <img src={event.images.image} alt={event.name} />
+    </li>
+  );
 };
 
 export default EventCard;
