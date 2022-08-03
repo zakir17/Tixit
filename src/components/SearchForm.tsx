@@ -15,6 +15,15 @@ const SearchForm = () => {
     //// navigation link/search results
   };
 
+  const searchTerm = {
+    keyword,
+    city,
+    startDateTime,
+    endDateTime,
+    stateCode,
+    classificationName,
+  };
+
   return (
     <form className="SearchForm" onSubmit={handleSubmit}>
       <label htmlFor="keyword">Keyword: </label>

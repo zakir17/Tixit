@@ -1,9 +1,14 @@
+interface Url {
+  url: string;
+}
+
 interface Image {
-  image: string;
+  image: Url;
 }
 interface Start {
   localDate: string;
   localTime: string;
+  // dateTime: string;
 }
 interface Name {
   name: string;

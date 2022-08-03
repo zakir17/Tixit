@@ -8,7 +8,11 @@ const EventCard = ({ event }: Props) => {
   return (
     <li className="EventCard">
       <h2>{event.name}</h2>
-      <img src={event.images.image} alt={event.name} />
+      <img src={""} alt={event.name} />
+      {/* <p>{event.images.image.url}</p> */}
+      <a href={event.url} target="_blank">
+        Buy Tickets!
+      </a>
     </li>
   );
 };
