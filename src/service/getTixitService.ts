@@ -1,9 +1,10 @@
 import axios from "axios";
 import EventResponse from "../models/EventResponse";
+import SearchTerms from "../models/SearchTerms";
 
 const key: string = process.env.REACT_APP_KEY || "";
 
-export const getTixit = (searchTerms: any): Promise<EventResponse> => {
+export const getTixit = (searchTerms: SearchTerms): Promise<EventResponse> => {
   searchTerms.apikey = key;
 
   return axios
