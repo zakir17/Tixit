@@ -12,16 +12,16 @@ import TixList from "./components/TixList";
 import SearchTerms from "./models/SearchTerms";
 import { getTixit } from "./service/getTixitService";
 
-let searchTerms: SearchTerms = {
-  city: "Detroit",
-};
+// let searchTerms: SearchTerms = {
+//   city: "Detroit",
+// };
 
 function App() {
-  useEffect(() => {
-    getTixit(searchTerms).then((response) => {
-      console.log(response);
-    });
-  }, []);
+  //   useEffect(() => {
+  //     getTixit(searchTerms).then((response) => {
+  //       console.log(response);
+  //     });
+  //   }, []);
 
   return (
     <div className="App">
