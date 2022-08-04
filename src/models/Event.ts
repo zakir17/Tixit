@@ -1,3 +1,7 @@
+interface Url {
+  url: string;
+}
+
 interface Image {
   url: string;
 }

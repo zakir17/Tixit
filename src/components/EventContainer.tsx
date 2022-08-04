@@ -10,7 +10,7 @@ const EventContainer = ({ events }: Props) => {
     <div className="EventContainer">
       <ul>
         {events.map((singleEvent) => (
-          <EventCard event={singleEvent} key={`${singleEvent}`} />
+          <EventCard event={singleEvent} key={`${singleEvent.id}`} />
         ))}
       </ul>
     </div>

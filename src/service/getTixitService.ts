@@ -9,7 +9,7 @@ export const getTixit = (searchTerms: SearchTerms): Promise<EventResponse> => {
 
   return axios
     .get("https://app.ticketmaster.com/discovery/v2/events", {
-      params: key,
+      params: searchTerms,
     })
     .then((response) => {
       return response.data;
