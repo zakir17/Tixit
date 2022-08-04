@@ -1,10 +1,10 @@
 import axios from "axios";
-import EventResponse from "../models/EventResponse";
-import SearchTerms from "../models/SearchTerms";
+import MultipleEventResponse from "../models/MultipleEventResponse";
+import SingleEventResponse from "../models/SingleEventResponse";
 
 const key: string = process.env.REACT_APP_KEY || "";
 
-export const getTixit = (searchTerms: any): Promise<EventResponse> => {
+export const getTixit = (searchTerms: any): Promise<MultipleEventResponse> => {
   searchTerms.apikey = key;
 
   return axios
@@ -16,14 +16,14 @@ export const getTixit = (searchTerms: any): Promise<EventResponse> => {
     });
 };
 
-export const getTixitById = (id: string): Promise<EventResponse> => {
+export const getTixitById = (id: string): Promise<SingleEventResponse> => {
   return axios
     .get(
-      `https://app.ticketmaster.com/discovery/v2/events.json/${encodeURIComponent(
+      `https://app.ticketmaster.com/discovery/v2/events/${encodeURIComponent(
         id
-      )}`,
+      )}.json`,
       {
-        params: key,
+        params: { apikey: key },
       }
     )
     .then((response) => {
