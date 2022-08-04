@@ -1,6 +1,5 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SearchTerms from "../models/SearchTerms";
 import "./SearchForm.css";
 
 const SearchForm = () => {

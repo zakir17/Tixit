@@ -19,7 +19,7 @@ const Main = () => {
   const classificationName: string | null =
     searchParams.get("classificationName");
 
-  const test: SearchTerms = {
+  const inquiry: SearchTerms = {
     ...(keyword ? { keyword } : {}),
     ...(city ? { city } : {}),
     ...(dateTime ? { dateTime } : {}),
@@ -28,11 +28,17 @@ const Main = () => {
   };
 
   useEffect(() => {
-    console.log(test);
-    getTixit({ test }).then((response) => {
-      setEvents(response._embedded.events);
-    });
-  }, [test]);
+    console.log(inquiry);
+    if (keyword || city || dateTime || stateCode || classificationName) {
+      getTixit(inquiry).then((response) => {
+        setEvents(response._embedded.events);
+      });
+    } else {
+      getTixit({}).then((response) => {
+        setEvents(response._embedded.events);
+      });
+    }
+  }, [keyword, city, dateTime, stateCode, classificationName]);
   return (
     <div className="Main">
       <SearchForm />
