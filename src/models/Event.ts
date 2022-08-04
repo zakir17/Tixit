@@ -1,9 +1,9 @@
 interface Image {
-  image: string;
+  url: string;
 }
+
 interface Start {
-  localDate: string;
-  localTime: string;
+  dateTime: string;
 }
 interface Name {
   name: string;

@@ -1,18 +1,31 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SearchTerms from "../models/SearchTerms";
 import "./SearchForm.css";
 
 const SearchForm = () => {
+  const navigate = useNavigate();
   const [keyword, setKeyword] = useState("");
   const [city, setCity] = useState("");
-  const [startDateTime, setStartDateTime] = useState("");
-  const [endDateTime, setEndDateTime] = useState("");
+  const [dateTime, setDateTime] = useState("");
   const [stateCode, setStateCode] = useState("");
   const [classificationName, setClassificationName] = useState("");
 
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault();
-    //// navigation link/search results
+
+    //  potential fix?
+    // const endPoints = "";
+    //   const searchTerms: SearchTerms = {
+    //     keyword: keyword,
+    //     city: city,
+    //     dateTime: dateTime,
+    //     stateCode: stateCode,
+    //     classificationName: classificationName
+    //   };
+    // navigate(
+    //   {searchTerms.keyword && endPoints=`${endPoints}` + `&keyword=` + `${searchTerms.keyword}`}
+    // )
   };
 
   return (
@@ -33,21 +46,13 @@ const SearchForm = () => {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <label htmlFor="startDateTime">Start Date: </label>
+      <label htmlFor="dateTime">Date: </label>
       <input
         type="datetime"
-        name="startDateTime"
-        id="startDateTime"
-        value={startDateTime}
-        onChange={(e) => setStartDateTime(e.target.value)}
-      />
-      <label htmlFor="endDateTime">End Date: </label>
-      <input
-        type="datetime"
-        name="endDateTime"
-        id="endDateTime"
-        value={endDateTime}
-        onChange={(e) => setEndDateTime(e.target.value)}
+        name="dateTime"
+        id="dateTime"
+        value={dateTime}
+        onChange={(e) => setDateTime(e.target.value)}
       />
       <label htmlFor="stateCode">State: </label>
       <input
