@@ -3,7 +3,13 @@ import { useNavigate } from "react-router-dom";
 import SearchTerms from "../models/SearchTerms";
 import "./SearchForm.css";
 
-const SearchForm = () => {
+interface Props {
+  onSearch: (term: SearchTerms) => void;
+}
+
+const SearchForm = ({ onSearch }: Props) => {
+  const [term, setTerm] = useState({});
+
   const navigate = useNavigate();
   const [keyword, setKeyword] = useState("");
   const [city, setCity] = useState("");
@@ -13,28 +19,19 @@ const SearchForm = () => {
 
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault();
+    const searchParams: any = {
+      ...(keyword ? { keyword } : {}),
+      ...(city ? { city } : {}),
+      ...(dateTime ? { dateTime } : {}),
+      ...(stateCode ? { stateCode } : {}),
+      ...(classificationName ? { classificationName } : {}),
+    };
 
-    //  potential fix?
-    // const endPoints = "";
-    //   const searchTerms: SearchTerms = {
-    //     keyword: keyword,
-    //     city: city,
-    //     dateTime: dateTime,
-    //     stateCode: stateCode,
-    //     classificationName: classificationName
-    //   };
-    // navigate(
-    //   {searchTerms.keyword && endPoints=`${endPoints}` + `&keyword=` + `${searchTerms.keyword}`}
-    // )
-  };
+    setTerm(searchParams);
+    onSearch(term);
 
-  const searchTerm = {
-    keyword,
-    city,
-    startDateTime,
-    endDateTime,
-    stateCode,
-    classificationName,
+    console.log(searchParams);
+    navigate(`/?${new URLSearchParams(searchParams)}`);
   };
 
   return (
@@ -57,7 +54,7 @@ const SearchForm = () => {
       />
       <label htmlFor="dateTime">Date: </label>
       <input
-        type="datetime"
+        type="date"
         name="dateTime"
         id="dateTime"
         value={dateTime}
@@ -85,3 +82,19 @@ const SearchForm = () => {
 };
 
 export default SearchForm;
+
+// if (keyword) {
+//   searchParams.keyword = keyword;
+// }
+// if (city) {
+//   searchParams.city = city;
+// }
+// if (dateTime) {
+//   searchParams.dateTime = dateTime;
+// }
+// if (stateCode) {
+//   searchParams.stateCode = stateCode;
+// }
+// if (classificationName) {
+//   searchParams.classificationName = classificationName;
+// }

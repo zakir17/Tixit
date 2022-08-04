@@ -1,8 +1,4 @@
-interface Url {
-  url: string;
-}
-
-interface Image {
+interface Images {
   url: string;
 }
 
@@ -30,7 +26,7 @@ export default interface Event {
   name: string;
   id: string;
   url: string;
-  images: Image;
+  images: Images[];
   date: Start;
   classification: Classification;
   embedded: Embedded;

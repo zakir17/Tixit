@@ -16,9 +16,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <SearchForm />
           <Route path="/" element={<Main />} />
-          <Route path="/events/TixList" element={<TixList />} />
+          <Route path="/events/tix-list" element={<TixList />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
