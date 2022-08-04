@@ -5,6 +5,7 @@ import {
   Routes,
 } from "react-router-dom";
 import "./App.css";
+import Details from "./components/Details";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import SearchForm from "./components/SearchForm";
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/events/tix-list" element={<TixList />} />
+          {/* <Route path="/events/details" element={<Details />} /> */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

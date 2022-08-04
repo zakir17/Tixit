@@ -3,7 +3,12 @@ interface Images {
 }
 
 interface Start {
+  localDate: string;
+  localTime: string;
   dateTime: string;
+}
+interface date {
+  start: Start;
 }
 interface Name {
   name: string;
@@ -14,7 +19,7 @@ interface Classification {
 }
 
 interface Embedded {
-  venue: Venue;
+  venues: Venue[];
 }
 interface Venue {
   name: string;
@@ -27,7 +32,7 @@ export default interface Event {
   id: string;
   url: string;
   images: Images[];
-  date: Start;
+  dates: date;
   classification: Classification;
-  embedded: Embedded;
+  _embedded: Embedded;
 }

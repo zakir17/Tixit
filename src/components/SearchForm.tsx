@@ -3,13 +3,7 @@ import { useNavigate } from "react-router-dom";
 import SearchTerms from "../models/SearchTerms";
 import "./SearchForm.css";
 
-interface Props {
-  onSearch: (term: SearchTerms) => void;
-}
-
-const SearchForm = ({ onSearch }: Props) => {
-  const [term, setTerm] = useState({});
-
+const SearchForm = () => {
   const navigate = useNavigate();
   const [keyword, setKeyword] = useState("");
   const [city, setCity] = useState("");
@@ -27,8 +21,7 @@ const SearchForm = ({ onSearch }: Props) => {
       ...(classificationName ? { classificationName } : {}),
     };
 
-    setTerm(searchParams);
-    onSearch(term);
+    // onSearch(searchParams);
 
     console.log(searchParams);
     navigate(`/?${new URLSearchParams(searchParams)}`);
