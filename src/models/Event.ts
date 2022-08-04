@@ -3,12 +3,11 @@ interface Url {
 }
 
 interface Image {
-  image: Url;
+  url: string;
 }
+
 interface Start {
-  localDate: string;
-  localTime: string;
-  // dateTime: string;
+  dateTime: string;
 }
 interface Name {
   name: string;

@@ -1,8 +1,7 @@
 export default interface SearchTerms {
   keyword?: string;
   city?: string;
-  startDateTime?: string;
-  endDateTime?: string;
+  dateTime?: string;
   stateCode?: string;
   classificationName?: string;
   apikey?: string;
