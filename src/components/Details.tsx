@@ -15,16 +15,17 @@ const Details = () => {
     });
   }, []);
 
-  console.log(event?.classifications[0].genre.name);
-
   return (
     <div className="Details">
       {event ? (
         <>
           <h2>{event.name}</h2>
           <img src={event.images[1].url} alt={event.name} />
-          <p>{event.dates.start.localDate}</p>
-          <p>{event.dates.start.localTime}</p>
+          <div>Don't miss your chance to see {event.name}!</div>
+          <p>
+            When: {event.dates.start.localDate} at {event.dates.start.localTime}
+          </p>
+          <p>{event.classifications[0].genre.name} type event at</p>
         </>
       ) : (
         <p>No Event here yet.</p>

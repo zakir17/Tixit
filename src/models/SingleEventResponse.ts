@@ -1,15 +1,13 @@
-interface PriceRanges {
-  min: string;
-  max: string;
-  currency: string;
-}
-
 interface Genre {
   name: string;
 }
 
 interface Classification {
   genre: Genre;
+}
+
+interface Venue {
+  name: string;
 }
 
 interface Start {
@@ -25,6 +23,10 @@ interface Image {
   url: string;
 }
 
+interface Embedded {
+  venues: Venue[];
+}
+
 export default interface SingleEvent {
   name: string;
   id: string;
@@ -32,7 +34,5 @@ export default interface SingleEvent {
   images: Image[];
   dates: Dates;
   classifications: Classification[];
-  info: string;
-  priceRanges: PriceRanges;
-  _embedded?: string;
+  _embedded: Embedded;
 }
