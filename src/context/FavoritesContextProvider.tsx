@@ -1,6 +1,5 @@
 import { ReactNode, useState } from "react";
 import Event from "../models/Event";
-
 import FavoritesContext from "./FavoritesContext";
 
 interface Props {

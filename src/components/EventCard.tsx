@@ -3,16 +3,28 @@ import { Link } from "react-router-dom";
 import FavoritesContext from "../context/FavoritesContext";
 import Event from "../models/Event";
 import "./EventCard.css";
+
 interface Props {
   event: Event;
 }
 
 const EventCard = ({ event }: Props) => {
   const { addFavorite, removeFavorite, isFav } = useContext(FavoritesContext);
-
   return (
     <li className="EventCard">
       <h2>{event.name}</h2>
+      {isFav(event.id) ? (
+        <i
+          className="fa-solid fa-star"
+          onClick={() => removeFavorite(event.id)}
+        ></i>
+      ) : (
+        <i
+          className="fa-regular fa-star"
+          onClick={() => addFavorite(event)}
+        ></i>
+      )}
+
       <img src={event.images[1].url} alt={event.name} />
       <p>{event.dates.start.localDate}</p>
       <p>{event.dates.start.localTime}</p>
