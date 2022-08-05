@@ -25,7 +25,13 @@ const Details = () => {
           <p>
             When: {event.dates.start.localDate} at {event.dates.start.localTime}
           </p>
-          <p>{event.classifications[0].genre.name} type event at</p>
+          <p>
+            {event.classifications[0].genre.name} type event at{" "}
+            {event._embedded.venues[0].name}
+          </p>
+          <p>
+            Get your tickets <a href={event.url}>here!</a>
+          </p>
         </>
       ) : (
         <p>No Event here yet.</p>

@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Details from "./components/Details";
+import Favorites from "./components/Favorites";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import TixList from "./components/TixList";
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/events/tix-list" element={<TixList />} />
           <Route path="/events/details/:id" element={<Details />} />
+          <Route path="/events/favorites" element={<Favorites />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

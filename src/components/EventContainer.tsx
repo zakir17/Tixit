@@ -1,6 +1,7 @@
 import Event from "../models/Event";
 import EventCard from "./EventCard";
 import "./EventContainer.css";
+
 interface Props {
   events: Event[];
 }
