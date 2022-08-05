@@ -17,8 +17,6 @@ const FavoritesContextProvider = ({ children }: Props) => {
     setFavorites((prev) => {
       const index: number = prev.findIndex((item) => item.id === id);
       return [...prev.slice(0, index), ...prev.slice(index + 1)];
-      // const index: number = prev.findIndex((item) => item.id === id);
-      // return [...prev.slice(0, index), ...prev.slice(index + 1)];
     });
   };
   const isFav = (id: string): boolean =>
