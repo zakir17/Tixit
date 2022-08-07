@@ -44,7 +44,7 @@ const SearchForm = () => {
         value={city}
         onChange={(e) => setCity(e.target.value)}
       />
-      <label htmlFor="dateTime">Date: </label>
+      <label htmlFor="dateTime">Start Date: </label>
       <input
         type="date"
         name="dateTime"

@@ -4,7 +4,10 @@ import "./Header.css";
 const Header = () => {
   return (
     <header className="Header">
-      <h1>TiXiT</h1>
+      <Link to="/events/main">
+        {" "}
+        <h1>TiXiT</h1>
+      </Link>
       <div>
         <Link to="/events/favorites">
           <button>TixList</button>
