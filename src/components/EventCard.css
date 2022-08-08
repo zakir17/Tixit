@@ -1,0 +1,14 @@
+EventCard,
+li {
+  margin: 5px;
+  flex-basis: 33.33%;
+  text-align: center;
+  background-color: #deefb7;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.EventCard img {
+  width: 100%;
+  object-fit: contain;
+}
