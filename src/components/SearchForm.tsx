@@ -2,7 +2,11 @@ import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SearchForm.css";
 
-const SearchForm = () => {
+interface Props {
+  onSetShowModal: (showModal: boolean) => void;
+}
+
+const SearchForm = ({ onSetShowModal }: Props) => {
   const navigate = useNavigate();
   const [keyword, setKeyword] = useState("");
   const [city, setCity] = useState("");
@@ -19,8 +23,7 @@ const SearchForm = () => {
       ...(stateCode ? { stateCode } : {}),
       ...(classificationName ? { classificationName } : {}),
     };
-
-    // onSearch(searchParams);
+    onSetShowModal(false);
 
     console.log(searchParams);
     navigate(`/?${new URLSearchParams(searchParams)}`);
@@ -68,7 +71,9 @@ const SearchForm = () => {
         value={classificationName}
         onChange={(e) => setClassificationName(e.target.value)}
       />
-      <button>Search</button>
+      <button>
+        <i className="fa-solid fa-ticket"> Search</i>
+      </button>
     </form>
   );
 };

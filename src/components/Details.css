@@ -12,9 +12,13 @@
   margin-right: 50px;
 }
 .Details button:hover {
-  background-color: #135c4a;
+  color: white;
+  background-color: #6d1321;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.Details button a {
+  color: black;
 }
 
 .Details {
@@ -25,4 +29,43 @@
   position: absolute;
   bottom: 5px;
   right: 5px;
+}
+
+.Details-holder {
+  text-align: center;
+}
+
+.Details .Details-text {
+  background-color: #57ff9257;
+  padding: 20px;
+}
+
+.Details img {
+  margin-top: 10px;
+  height: 200px;
+  width: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .Details .Details-holder {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .Details .Details-text {
+    margin-top: 45px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Details img {
+    height: 450px;
+    width: auto;
+  }
+  .Details .Details-text {
+    background-color: #57ff9257;
+    padding: 0px;
+    max-height: 450px;
+  }
 }

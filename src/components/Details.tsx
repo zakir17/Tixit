@@ -20,27 +20,40 @@ const Details = () => {
     <div className="Details">
       {event ? (
         <>
-          <h2>{event.name}</h2>
-          <img src={event.images[1].url} alt={event.name} />
-          <div>Don't miss your chance to see {event.name}!</div>
-          <p>
-            When: {event.dates.start.localDate} at {event.dates.start.localTime}
-          </p>
-          <p>
-            {event.classifications[0].genre.name} type event at{" "}
-            {event._embedded.venues[0].name}
-          </p>
-          <p>
-            Get your tickets{" "}
-            <button>
-              <a href={event.url}>Here!</a>
-            </button>
-          </p>
-          <p>
-            <button className="back-button" onClick={() => navigate(-1)}>
-              Back
-            </button>
-          </p>
+          <div className="Details-holder">
+            <div>
+              <h2>{event.name}</h2>
+              <img src={event.images[1].url} alt={event.name} />
+            </div>
+            <div className="Details-text">
+              <h3>Don't miss your chance to see {event.name}!</h3>
+              <p>
+                Bio: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quod, minus, officia natus dicta ducimus temporibus eaque nobis
+                repellendus asperiores iste itaque? Est minima magni voluptates
+                possimus ipsum iusto excepturi ullam.
+              </p>
+              <p>
+                When: {event.dates.start.localDate} at{" "}
+                {event.dates.start.localTime}
+              </p>
+              <p>
+                {event.classifications[0].genre.name} type event at{" "}
+                {event._embedded.venues[0].name}
+              </p>
+              <p>
+                Get your tickets{" "}
+                <button>
+                  <a href={event.url}>Here!</a>
+                </button>
+              </p>
+              <p>
+                <button className="back-button" onClick={() => navigate(-1)}>
+                  Back
+                </button>
+              </p>
+            </div>
+          </div>
         </>
       ) : (
         <p>No Event here yet.</p>
