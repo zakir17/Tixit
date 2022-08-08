@@ -17,14 +17,22 @@ li {
 }
 
 .EventCard .cardbg {
-  opacity: 0.3;
+  opacity: 0.1;
   position: absolute;
   left: 0;
-  top: 0;
   width: 100%;
-  height: auto;
+  height: 50%;
+  bottom: 0;
 }
 
 .EventCard .cardcontent {
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .EventCard,
+  li {
+    flex-basis: 25%;
+    margin: 5px 0;
+  }
 }

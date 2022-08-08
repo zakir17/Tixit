@@ -1,3 +1,4 @@
+import events from "events";
 import Event from "../models/Event";
 import EventCard from "./EventCard";
 import "./EventContainer.css";
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const EventContainer = ({ events }: Props) => {
+  console.log(events);
   return (
     <div className="EventContainer">
       <ul>

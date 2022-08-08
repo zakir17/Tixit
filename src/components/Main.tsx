@@ -8,6 +8,7 @@ import Event from "../models/Event";
 import { useSearchParams } from "react-router-dom";
 import SearchTerms from "../models/SearchTerms";
 import { findAllByTestId } from "@testing-library/react";
+import ScrollToTop from "react-scroll-to-top";
 
 const Main = () => {
   // const [showModal, setShowModal] = useState(false);
@@ -50,6 +51,7 @@ const Main = () => {
       {showModal && <SearchForm onSetShowModal={setShowModal} />} */}
 
       <EventContainer events={events} />
+      <ScrollToTop smooth color="#B3001B" />
     </div>
   );
 };

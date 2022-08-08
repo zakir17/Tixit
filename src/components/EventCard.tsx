@@ -14,7 +14,7 @@ const EventCard = ({ event }: Props) => {
     <li className="EventCard">
       <img
         className="cardbg"
-        src={require("../assets/VertLogo.png")}
+        src={require("../assets/TixitsmallerLogo.png")}
         alt="background logo"
       />
       <div className="cardcontent">
@@ -39,9 +39,9 @@ const EventCard = ({ event }: Props) => {
           )}
         </h2>
         <img className="event-img" src={event.images[1].url} alt={event.name} />
-        <p>{event.dates.start.localDate}</p>
-        <p>{event.dates.start.localTime}</p>
-        <p>{event._embedded.venues[0].city.name}</p>
+        <p>When: {event.dates.start.localDate}</p>
+        <p>Time: {event.dates.start.localTime}</p>
+        <p>Where: {event._embedded.venues[0].city.name}</p>
         <Link to={`/events/details/${encodeURIComponent(event.id)}`}>
           See more
         </Link>{" "}

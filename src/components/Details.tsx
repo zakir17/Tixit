@@ -47,6 +47,7 @@ const Details = () => {
                   <a href={event.url}>Here!</a>
                 </button>
               </p>
+              <p>Ticket prices starting at ${event.priceRanges[0].min}.</p>
               <p>
                 <button className="back-button" onClick={() => navigate(-1)}>
                   Back

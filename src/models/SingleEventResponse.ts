@@ -27,6 +27,12 @@ interface Embedded {
   venues: Venue[];
 }
 
+interface priceRanges {
+  min: number;
+  max: number;
+  currency: string;
+}
+
 export default interface SingleEvent {
   name: string;
   id: string;
@@ -34,5 +40,6 @@ export default interface SingleEvent {
   images: Image[];
   dates: Dates;
   classifications: Classification[];
+  priceRanges: priceRanges[];
   _embedded: Embedded;
 }

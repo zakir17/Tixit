@@ -7,6 +7,8 @@
   margin-bottom: 5px;
   border-bottom: 3px double #6d1321;
   border-top: 3px double #6d1321;
+
+  width: 100%;
 }
 .Header form {
   margin: 0;

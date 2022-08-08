@@ -5,4 +5,6 @@ export default interface SearchTerms {
   stateCode?: string;
   classificationName?: string;
   apikey?: string;
+  size?: string;
+  page?: string;
 }
