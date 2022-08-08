@@ -6,7 +6,9 @@ const Header = () => {
     <header className="Header">
       <Link to="/events/main">
         {" "}
-        <h1>TiXiT</h1>
+        <h1>
+          <img src="../assets/Tixitlogo1.png" alt="" />
+        </h1>
       </Link>
       <div>
         <Link to="/events/favorites">
