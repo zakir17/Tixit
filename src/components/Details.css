@@ -1,0 +1,28 @@
+.Details button {
+  background-color: #deefb7;
+  width: 150px;
+  color: black;
+  border-radius: 5px;
+  font-weight: bolder;
+  padding: 10px;
+  border: #deefb7;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #135c4a;
+  margin-right: 50px;
+}
+.Details button:hover {
+  background-color: #135c4a;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Details {
+  margin-left: 15px;
+}
+
+.Details .back-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}

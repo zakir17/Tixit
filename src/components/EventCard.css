@@ -6,6 +6,7 @@ li {
   background-color: #deefb7;
   border-radius: 20px;
   padding: 10px;
+  border: 1px solid #262626;
 }
 
 .EventCard img {

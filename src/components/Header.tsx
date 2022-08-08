@@ -6,9 +6,7 @@ const Header = () => {
     <header className="Header">
       <Link to="/events/main">
         {" "}
-        <h1>
-          <img src="../assets/Tixitlogo1.png" alt="" />
-        </h1>
+        <img src={require("../assets/Tixitlogo1.png")} />
       </Link>
       <div>
         <Link to="/events/favorites">

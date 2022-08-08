@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import SingleEvent from "../models/SingleEventResponse";
 import { getTixitById } from "../service/getTixitService";
 import "./Details.css";
@@ -14,6 +14,7 @@ const Details = () => {
       setEvent(response);
     });
   }, []);
+  const navigate = useNavigate();
 
   return (
     <div className="Details">
@@ -30,7 +31,15 @@ const Details = () => {
             {event._embedded.venues[0].name}
           </p>
           <p>
-            Get your tickets <a href={event.url}>here!</a>
+            Get your tickets{" "}
+            <button>
+              <a href={event.url}>Here!</a>
+            </button>
+          </p>
+          <p>
+            <button className="back-button" onClick={() => navigate(-1)}>
+              Back
+            </button>
           </p>
         </>
       ) : (
