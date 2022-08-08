@@ -11,17 +11,16 @@ const Header = () => {
         {" "}
         <img src={require("../assets/Tixitlogo1.png")} />
       </Link>
-      <div>
-        {" "}
+      <div className="button-holder">
         <Link to="/events/favorites">
           <button>TixList</button>
         </Link>{" "}
-        <div>
+        {showModal ? null : (
           <button className="showModal" onClick={() => setShowModal(true)}>
             Search
           </button>
-          {showModal && <SearchForm onSetShowModal={setShowModal} />}
-        </div>
+        )}
+        {showModal && <SearchForm onSetShowModal={setShowModal} />}
       </div>
     </header>
   );

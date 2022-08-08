@@ -1,12 +1,22 @@
 .SearchForm {
-  border: 2px solid #6d1321;
-  margin: 10px;
-  padding: 10px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #deefb7;
+  background-color: #6d1321;
   align-items: center;
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
 }
 
 .SearchForm input[type="text"],
@@ -37,8 +47,18 @@ textarea {
 
 @media only screen and (min-width: 768px) {
   .SearchForm {
+    position: relative;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .modal {
+    flex-direction: row;
+    background-color: #deefb7;
+    color: black;
+    padding: 10px;
+  }
+  .SearchForm label .dateTime {
+    margin: 5px;
   }
 }

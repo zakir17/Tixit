@@ -25,7 +25,6 @@
   transition-duration: 0.4s;
   cursor: pointer;
   border: 2px solid #135c4a;
-  margin-right: 50px;
 }
 .Header button:hover {
   color: white;
@@ -39,4 +38,13 @@
   width: 200px;
   margin-left: 10px;
   margin-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Header .button-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
 }
