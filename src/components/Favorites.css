@@ -3,3 +3,27 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+.Favorites .back-button {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: #deefb7;
+  width: 150px;
+  color: black;
+  border-radius: 5px;
+  font-weight: bolder;
+  padding: 10px;
+  border: #deefb7;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #135c4a;
+  margin-right: 50px;
+}
+
+.Favorites .back-button:hover {
+  color: white;
+  background-color: #6d1321;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

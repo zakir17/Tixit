@@ -1,0 +1,44 @@
+.SearchForm {
+  border: 2px solid #6d1321;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #deefb7;
+  align-items: center;
+}
+
+.SearchForm input[type="text"],
+textarea {
+  background-color: #135c4a;
+  color: white;
+  width: 75%;
+}
+.SearchForm input[type="date"] {
+  width: 75%;
+  text-align: center;
+  background-color: #135c4a;
+  color: white;
+}
+.SearchForm button {
+  margin-top: 5px;
+  padding: 15px;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.SearchForm button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  background-color: #6d1321;
+}
+
+@media only screen and (min-width: 768px) {
+  .SearchForm {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}

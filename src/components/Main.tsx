@@ -7,8 +7,11 @@ import SearchForm from "./SearchForm";
 import Event from "../models/Event";
 import { useSearchParams } from "react-router-dom";
 import SearchTerms from "../models/SearchTerms";
+import { findAllByTestId } from "@testing-library/react";
 
 const Main = () => {
+  // const [showModal, setShowModal] = useState(false);
+
   const [events, setEvents] = useState<Event[]>([]);
   const [searchParams] = useSearchParams();
 
@@ -41,7 +44,11 @@ const Main = () => {
   }, [keyword, city, dateTime, stateCode, classificationName]);
   return (
     <div className="Main">
-      <SearchForm />
+      {/* <button className="showModal" onClick={() => setShowModal(true)}>
+        Search
+      </button>
+      {showModal && <SearchForm onSetShowModal={setShowModal} />} */}
+
       <EventContainer events={events} />
     </div>
   );

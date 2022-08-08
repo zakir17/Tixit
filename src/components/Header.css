@@ -3,12 +3,17 @@
   align-items: center;
   justify-content: space-between;
   background-color: #262626;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 5px;
   border-bottom: 3px double #6d1321;
   border-top: 3px double #6d1321;
 }
-
+.Header form {
+  margin: 0;
+}
+.Header label {
+  margin: px;
+}
 .Header button {
   background-color: #deefb7;
   width: 150px;
@@ -23,7 +28,8 @@
   margin-right: 50px;
 }
 .Header button:hover {
-  background-color: #135c4a;
+  color: white;
+  background-color: #6d1321;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
@@ -31,5 +37,6 @@
 .Header img {
   height: auto;
   width: 200px;
-  margin-left: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
 }
