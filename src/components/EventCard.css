@@ -7,9 +7,24 @@ li {
   border-radius: 20px;
   padding: 10px;
   border: 1px solid #262626;
+  overflow: hidden;
+  position: relative;
 }
 
-.EventCard img {
+.EventCard .event-img {
   width: 100%;
   object-fit: contain;
+}
+
+.EventCard .cardbg {
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.EventCard .cardcontent {
+  position: relative;
 }
