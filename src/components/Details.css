@@ -35,6 +35,10 @@
   text-align: center;
 }
 
+.Details-holder h2 {
+  color: #deefb7;
+}
+
 .Details .Details-text {
   background-color: #57ff9257;
   padding: 20px;

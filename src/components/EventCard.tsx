@@ -38,7 +38,7 @@ const EventCard = ({ event }: Props) => {
             ></i>
           )}
         </h2>
-        <img className="event-img" src={event.images[1].url} alt={event.name} />
+        <img className="event-img" src={event.images[0].url} alt={event.name} />
         <p>When: {event.dates.start.localDate}</p>
         <p>Time: {event.dates.start.localTime}</p>
         <p>Where: {event._embedded.venues[0].city.name}</p>
