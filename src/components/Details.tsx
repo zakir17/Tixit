@@ -44,7 +44,9 @@ const Details = () => {
               <p>
                 Get your tickets{" "}
                 <button>
-                  <a href={event.url}>Here!</a>
+                  <a href={event.url} target="_blank">
+                    Here!
+                  </a>
                 </button>
               </p>
               <p>Ticket prices starting at ${event.priceRanges[0].min}.</p>
