@@ -58,7 +58,10 @@ textarea {
     color: black;
     padding: 10px;
   }
-  .SearchForm label .dateTime {
+  .SearchForm input {
+    margin: 5px;
+  }
+  .SearchForm label {
     margin: 5px;
   }
 }

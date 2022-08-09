@@ -48,7 +48,7 @@ const SearchForm = ({ onSetShowModal }: Props) => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <label htmlFor="dateTime">Start Date: </label>
+        <label htmlFor="dateTime">Date: </label>
         <input
           type="date"
           name="dateTime"

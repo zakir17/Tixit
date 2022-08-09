@@ -1,4 +1,3 @@
-EventCard,
 li {
   margin: 5px;
   flex-basis: 33.33%;
@@ -9,6 +8,7 @@ li {
   border: 1px solid #262626;
   overflow: hidden;
   position: relative;
+  z-index: -1;
 }
 
 .EventCard .event-img {

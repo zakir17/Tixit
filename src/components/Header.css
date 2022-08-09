@@ -28,6 +28,11 @@
   cursor: pointer;
   border: 2px solid #135c4a;
 }
+
+.button-holder {
+  margin-right: 20px;
+}
+
 .Header button:hover {
   color: white;
   background-color: #6d1321;
