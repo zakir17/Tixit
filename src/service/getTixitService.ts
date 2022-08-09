@@ -6,8 +6,7 @@ const key: string = process.env.REACT_APP_KEY || "";
 
 export const getTixit = (searchTerms: any): Promise<MultipleEventResponse> => {
   searchTerms.apikey = key;
-  searchTerms.size = "40";
-  searchTerms.page = "4";
+  searchTerms.size = "100";
 
   return axios
     .get("https://app.ticketmaster.com/discovery/v2/events.json", {
