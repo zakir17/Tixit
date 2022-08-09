@@ -10,7 +10,7 @@ const SearchForm = ({ onSetShowModal }: Props) => {
   const navigate = useNavigate();
   const [keyword, setKeyword] = useState("");
   const [city, setCity] = useState("");
-  const [dateTime, setDateTime] = useState("");
+  // const [localDate, setLocalDate] = useState("");
   const [stateCode, setStateCode] = useState("");
   const [classificationName, setClassificationName] = useState("");
 
@@ -19,7 +19,7 @@ const SearchForm = ({ onSetShowModal }: Props) => {
     const searchParams: any = {
       ...(keyword ? { keyword } : {}),
       ...(city ? { city } : {}),
-      ...(dateTime ? { dateTime } : {}),
+      // ...(localDate ? { localDate } : {}),
       ...(stateCode ? { stateCode } : {}),
       ...(classificationName ? { classificationName } : {}),
     };
@@ -48,14 +48,14 @@ const SearchForm = ({ onSetShowModal }: Props) => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <label htmlFor="dateTime">Date: </label>
+        {/* <label htmlFor="localDate">Date: </label>
         <input
           type="date"
-          name="dateTime"
-          id="dateTime"
-          value={dateTime}
-          onChange={(e) => setDateTime(e.target.value)}
-        />
+          name="localDate"
+          id="localDate"
+          value={localDate}
+          onChange={(e) => setLocalDate(e.target.value)}
+        /> */}
         <label htmlFor="stateCode">State: </label>
         <input
           type="text"
